@@ -10,10 +10,6 @@
 homeassistant = {}
 homeassistant.mod = { author = "Jeff Schilders" }
 
---local serverurl='http://192.168.0.186:8123'
---local hatoken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJlOGFlMGI3MmQ0MjU0YzY1YWQ4MzEzNTI2ZTIyOGYzOSIsImlhdCI6MTcxMzI4NDkxNSwiZXhwIjoyMDI4NjQ0OTE1fQ.iKWMpBzItWGL-iRN_2YFwkCEpk9qbaPwMJ3rsVmk428"
---local entity_name='light.esphome_led001_neopixel_light'
-
 local serverurl=minetest.settings:get("homeassistant_server_url")
 local hatoken=minetest.settings:get("homeassistant_token")
 local entity_name=minetest.settings:get("homeassistant_default")
