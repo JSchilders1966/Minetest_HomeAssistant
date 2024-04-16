@@ -1,0 +1,5 @@
+[homeassistant]
+
+homeassistant_server_url (Home Assistant url) string http://xxx.xxx.xxx.xxx:8123
+homeassistant_token (Header token) string yourtoken
+homeassistant_default (Entity) string light.esphome-001
