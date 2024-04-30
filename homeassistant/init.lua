@@ -5,6 +5,8 @@
 --
 -- By Jeff Schilders <jeff@schilders.com>
 -- 
+-- Bugs:
+--
 -- See README.txt for more information.
 
 homeassistant = {}
