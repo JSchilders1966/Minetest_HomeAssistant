@@ -15,13 +15,8 @@ homeassistant.mod = { author = "Jeff Schilders" }
 local serverurl=minetest.settings:get("homeassistant_server_url")
 local hatoken=minetest.settings:get("homeassistant_token")
 local entity_name=minetest.settings:get("homeassistant_default")
-
-
-
 local http = minetest.request_http_api()
 assert(http, "HTTP API unavailable. Please add `homeassistant` to secure.trusted_mods in minetest.conf!")
-
-
 
 local S = minetest.get_translator(minetest.get_current_modname())
 if (minetest.get_modpath("intllib")) then
@@ -29,8 +24,6 @@ if (minetest.get_modpath("intllib")) then
 else
   S = function ( s ) return s end
 end
-
-
 
 minetest.register_node("homeassistant:ledbutton_off", {
   description = S("HA Light switch"),
@@ -60,12 +53,10 @@ minetest.register_node("homeassistant:ledbutton_off", {
   end,
 
   on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-
     local meta = minetest.get_meta(pos)
     local player = clicker:get_player_name()
 
     if meta:get_string("entity_name") == "" or itemstack:get_name() == "default:stick" then 
-
       if itemstack:get_name() == "default:stick" then
         entity_name=meta:get_string("entity_name")
       end
@@ -115,6 +106,7 @@ minetest.register_node("homeassistant:ledbutton_on", {
     cracky = 3,
     oddly_breakable_by_hand = 3
   },
+  
   light_source = 10,  
   groups = {not_in_creative_inventory=1,mesecon_effector_on = 1},
   sounds = default.node_sound_glass_defaults(),
@@ -124,6 +116,7 @@ minetest.register_node("homeassistant:ledbutton_on", {
       minetest.swap_node(pos, {name = "homeassistant:ledbutton_off", param2 = node.param2})	
     end  
 	}},
+
   on_construct = function(pos)
 
   end,
@@ -135,15 +128,11 @@ minetest.register_node("homeassistant:ledbutton_on", {
 
 })
 
-
-
-
 function webhook(pos,state)
   -- light/turn_off
   -- light/turn_on
   local meta = minetest.get_meta(pos)
   local entity_name=meta:get_string("entity_name")
-  
   if entity_name ~= '' then
     data=string.split(entity_name, '.')
     local action=data[1]..'/'..state
@@ -165,9 +154,6 @@ function webhook(pos,state)
       end  
     end)  
   end
-
-
-
 end
 
 
