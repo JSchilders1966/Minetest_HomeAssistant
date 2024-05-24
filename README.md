@@ -13,6 +13,7 @@ In Minetest under settings -> Content: Mods -> Home Assistant enter:
 * **Entity**: a default entity name (light.esphome-001)
 
 You can find the Entityname in Home Assistant http://xxx.xxx.xxx.xxx:8123/config/entities
+
 Current only light en switch are working. 
 
 [MineTest Mod page](https://content.minetest.net/packages/Jeff/homeassistant/).
