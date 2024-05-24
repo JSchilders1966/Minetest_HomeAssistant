@@ -8,9 +8,9 @@ The mod use the API of your internal [Home Assistant](https://www.home-assistant
 Create in your Home Assistant appliance a long life token. 
 In Minetest under settings -> Content: Mods -> Home Assistant enter:
 
-**Home Assistant URL**: http://xxx.xxx.xxx.xxx:8123
-**Header Token**: (the long life token from Home Assistant you created)
-**Entity**: a default entity name (light.esphome-001)
+* **Home Assistant URL**: http://xxx.xxx.xxx.xxx:8123
+* **Header Token**: (the long life token from Home Assistant you created)
+* **Entity**: a default entity name (light.esphome-001)
 
 You can find the Entityname in Home Assistant http://xxx.xxx.xxx.xxx:8123/config/entities
 Current only light en switch are working. 
