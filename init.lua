@@ -1,13 +1,14 @@
 -- mods/homeassistant/init.lua
 -- =======================
--- A node to turn real light en switches on and off in your room within a Minetest world
--- Version 1.1 04-16-2024
+-- A node to turn real lights en switches on and off in your smarthome within a Minetest world
+-- You need Home Assistant running at your home. 
 --
+-- Version 1.1 04-16-2024
 -- By Jeff Schilders <jeff@schilders.com>
 -- 
 -- Bugs:
 --
--- See README.txt for more information.
+-- See README.md for more information.
 
 homeassistant = {}
 homeassistant.mod = { author = "Jeff Schilders" }
